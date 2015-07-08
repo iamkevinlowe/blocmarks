@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
   before_create :generate_slug
 
   friendly_id :name, use: :slugged
-  validates_presence_of :name, :slug
+  validates :name, presence: true
+  validates :slug, presence: true
 
   private
 
