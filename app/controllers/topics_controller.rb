@@ -6,9 +6,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.friendly.find(params[:id])
-  end
-
-  def new
+    @bookmark = Bookmark.new(topic: @topic)
   end
 
   def create
@@ -21,9 +19,6 @@ class TopicsController < ApplicationController
       flash[:error] = "There was an error creating the topic. Please try again."
       redirect_to topics_path
     end
-  end
-
-  def edit
   end
 
   def destroy

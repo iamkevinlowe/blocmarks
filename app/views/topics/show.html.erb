@@ -1,5 +1,10 @@
 <h1 class="text-center"><%= @topic.title %></h1>
 
 <div class="row">
-  <%= render partial: 'bookmarks/bookmark', collection: @topic.bookmarks %>
+  <div class="col-md-8">
+    <%= render partial: 'bookmarks/bookmark', collection: @topic.bookmarks %>    
+  </div>
+  <div class="col-md-4">
+    <%= render partial: 'bookmarks/form', locals: { bookmark: @bookmark } %>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'puma'
+# gem 'puma'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
