@@ -18,7 +18,7 @@
           Hello <%= link_to (current_user.name || current_user.email), current_user %>!&nbsp;
           <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
             <span class="glyphicon glyphicon-user"></span>
-          <% end %>
+          <% end %>&nbsp;
           <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
             <span class="glyphicon glyphicon-log-out"></span>
           <% end %>
@@ -27,7 +27,6 @@
           <%= link_to "Log in", new_user_session_path, class: 'btn btn-primary btn-sm' %>
         <% end %>
       </div> 
-
     </ul>
 
     <% if flash[:notice] %>
@@ -49,6 +48,5 @@
   
     <%= yield %>
   </div>
-
 </body>
 </html>
