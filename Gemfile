@@ -8,6 +8,7 @@ gem 'pry-rails'
 gem 'figaro'
 gem 'faker'
 gem 'will_paginate'
+gem 'pundit'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

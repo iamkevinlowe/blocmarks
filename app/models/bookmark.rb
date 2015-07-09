@@ -1,5 +1,6 @@
 class Bookmark < ActiveRecord::Base
   belongs_to :topic
+  belongs_to :user
 
   before_save :fix_url
 

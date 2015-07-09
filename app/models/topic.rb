@@ -1,7 +1,7 @@
 class Topic < ActiveRecord::Base
   extend FriendlyId
   belongs_to :user
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
 
   before_create :generate_slug
 
