@@ -5,8 +5,6 @@
     <%= render partial: 'bookmarks/bookmark', collection: @topic.bookmarks %>
   </div>
   <div class="col-md-4">
-    <% if policy(@bookmark).create? %>
-      <%= render partial: 'bookmarks/form', locals: { bookmark: @bookmark } %>
-    <% end %>
+    <%= render partial: 'bookmarks/form', locals: { bookmark: @bookmark } %>
   </div>
 </div>

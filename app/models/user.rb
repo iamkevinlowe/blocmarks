@@ -6,12 +6,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_many :topics
   has_many :bookmarks, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   before_create :generate_slug
 
   friendly_id :name, use: :slugged
   validates :name, presence: true
   validates :slug, presence: true
+
+  def liked(bookmark)
+    likes.where(bookmark_id: bookmark.id).first
+  end
 
   private
 
