@@ -1,0 +1,6 @@
+%h4 Create a new topic
+= form_for topic do |f|
+  .form-group
+    = f.text_field :title, class: 'form-control', placeholder: "Enter title"
+  .from-group
+    = f.submit "New", class: 'btn btn-success pull-right'

@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   def create
-    bookmark = Bookmark.find(params[:bookmark_id])
+    bookmark = Bookmark.friendly.find(params[:bookmark_id])
     like = current_user.likes.build(bookmark: bookmark)
     authorize like
     if like.save
@@ -13,7 +13,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    bookmark = Bookmark.find(params[:bookmark_id])
+    bookmark = Bookmark.friendly.find(params[:bookmark_id])
     like = current_user.likes.find(params[:id])
     authorize like
     if like.destroy

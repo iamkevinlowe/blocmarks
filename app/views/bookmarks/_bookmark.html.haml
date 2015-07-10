@@ -1,0 +1,6 @@
+.col-md-4.mts
+  = link_to bookmark.url, class: 'embedly-card' do
+    .card-size.img-responsive.center-block
+  .text-center
+    - cache do
+      = render partial: 'likes/like', locals: { bookmark: bookmark }

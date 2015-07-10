@@ -9,6 +9,8 @@ gem 'figaro'
 gem 'faker'
 gem 'will_paginate'
 gem 'pundit'
+gem 'haml'
+gem 'embedly'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

@@ -1,0 +1,8 @@
+%h1.text-center 
+  = @topic.title
+
+.row
+  .col-md-8
+    = render @topic.bookmarks
+  .col-md-4
+    = render partial: 'bookmarks/form', locals: { bookmark: @bookmark }
