@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'puma'
+# gem 'puma'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'pry-rails'
+gem 'figaro'
+gem 'faker'
+gem 'will_paginate'
+gem 'pundit'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
