@@ -9,4 +9,7 @@
   </div>
   <%= render partial: 'bookmarks/bookmark', collection: topic.bookmarks %>
 </div>
-<hr>
+
+<script>
+  blocmetrics.report("Topic partial");
+</script>
