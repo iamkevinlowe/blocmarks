@@ -23,7 +23,7 @@ class IncomingController < ApplicationController
       topic = Topic.create!(title: params[:subject], user_id: user.id)
     end
     # Now that you're sure you have a valid user and topic, build and save a new bookmark
-    bookmark = Bookmark.create!(url: url, topic_id: topic.id)
+    bookmark = Bookmark.create!(url: url, topic_id: topic.id, user_id: user.id)
     # Assuming all went well. 
     head 200
   end
