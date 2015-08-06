@@ -2,5 +2,4 @@
   = link_to bookmark.url, class: 'embedly-card' do
     .card-size.img-responsive.center-block
   .text-center
-    - cache do
-      = render partial: 'likes/like', locals: { bookmark: bookmark }
+    = render partial: 'likes/like', locals: { bookmark: bookmark }
