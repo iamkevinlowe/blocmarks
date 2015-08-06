@@ -1,0 +1,8 @@
+<div class="col-sm-3 col-xs-4 mts">
+  <%= link_to bookmark.url, class: 'embedly-card' do%>
+    <div class="card-img img-responsive center-block"></div>
+  <% end %>
+  <div class="text-center">
+    <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+  </div> 
+</div>

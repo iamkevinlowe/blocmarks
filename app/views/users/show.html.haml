@@ -1,0 +1,15 @@
+%h1.text-center My Blocmarks
+
+.row
+  .col-md-12
+    = render partial: 'topics/topic', collection: @topics
+  .col-md-12
+    = will_paginate @topics, param_name: 'user_page'
+
+%h1.text-center Liked Blocmarks
+
+.row
+  .col-md-12
+    = render partial: 'bookmarks/bookmark', collection: @liked_bookmarks
+  .col-md-12
+    = will_paginate @liked_bookmarks, param_name: 'liked_page'

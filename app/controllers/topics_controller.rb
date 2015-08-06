@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all.paginate(page: params[:page], per_page: 3)
+    @topics = Topic.eager_load(:user, :bookmarks).paginate(page: params[:page], per_page: 3)
     @topic = Topic.new
   end
 

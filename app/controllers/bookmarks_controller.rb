@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
   def show
-    @bookmark = Bookmark.find(params[:id])
+    @bookmark = Bookmark.includes(:topic).friendly.find(params[:id])
     authorize @bookmark
   end
 
@@ -19,7 +19,7 @@ class BookmarksController < ApplicationController
   end
 
   def update
-    bookmark = Bookmark.find(params[:id])
+    bookmark = Bookmark.friendly.find(params[:id])
     authorize bookmark
     if bookmark.update_attributes(bookmark_params)
       flash[:notice] = "Bookmark was updated successfully."
@@ -31,7 +31,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    bookmark = Bookmark.find(params[:id])
+    bookmark = Bookmark.friendly.find(params[:id])
     authorize bookmark
     if bookmark.destroy
       flash[:notice] = "Bookmark was deleted successfully."

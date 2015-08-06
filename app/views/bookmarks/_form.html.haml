@@ -1,0 +1,7 @@
+- if policy(bookmark).create?
+  %h4 Create a new bookmark
+  = form_for [bookmark.topic, bookmark] do |f|
+    .form-group
+      = f.text_field :url, class: 'form-control', placeholder: "Enter url"
+    .form-group
+      = f.submit "New", class: 'btn btn-success pull-right'

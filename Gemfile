@@ -9,6 +9,8 @@ gem 'figaro'
 gem 'faker'
 gem 'will_paginate'
 gem 'pundit'
+gem 'haml'
+gem 'embedly'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -50,6 +52,7 @@ group :development do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
 end
 
 group :development, :test do

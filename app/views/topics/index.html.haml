@@ -1,0 +1,9 @@
+%h1.text-center Blocmark Topics
+
+.row
+  .col-md-8
+    = render @topics
+    = will_paginate @topics
+  .col-md-4
+    - if current_user
+      = render partial: 'topics/form', locals: { topic: @topic }
